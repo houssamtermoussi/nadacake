@@ -141,8 +141,8 @@ em {
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
-  padding-bottom: 0.12em;
-  margin-bottom: -0.12em;
+  padding: 0.1em 0.06em 0.16em;
+  margin: -0.1em -0.06em -0.16em;
 }
 
 .split-word > span {
@@ -1587,6 +1587,24 @@ em {
 
   .about__visual {
     min-height: 480px;
+  }
+}
+
+@media (min-width: 900px) {
+  .creations.is-pinned {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5.5rem 0 1rem;
+  }
+
+  .creations.is-pinned .creations__head {
+    margin-bottom: 1.5rem;
+  }
+
+  .creations.is-pinned .card__media {
+    height: min(30vw, 40vh);
   }
 }
 

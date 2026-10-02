@@ -69,7 +69,7 @@ export function createViewer(
 
   scene.add(new THREE.HemisphereLight(0xfff0f5, 0xf7b6cf, 0.9));
   const key = new THREE.DirectionalLight(0xffffff, 2.2);
-  key.position.set(3, 7, 4);
+  key.position.set(1.2, 9, 2);
   key.castShadow = true;
   key.shadow.mapSize.set(1024, 1024);
   Object.assign(key.shadow.camera, { left: -3.5, right: 3.5, top: 3.5, bottom: -3.5, near: 1, far: 20 });
@@ -108,7 +108,7 @@ export function createViewer(
 
   const ground = new THREE.Mesh(
     new THREE.PlaneGeometry(30, 30),
-    new THREE.ShadowMaterial({ color: 0x8a2f55, opacity: 0.16 }),
+    new THREE.ShadowMaterial({ color: 0x8a2f55, opacity: 0.12 }),
   );
   ground.rotation.x = -Math.PI / 2;
   ground.position.y = groundY;
