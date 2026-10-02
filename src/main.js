@@ -352,7 +352,7 @@ if (finePointer) {
 
   const layout = () => {
     const w = items[0].offsetWidth;
-    radius = Math.round(w / 2 / Math.tan(Math.PI / items.length)) + w * 0.18;
+    radius = Math.round((w / 2 / Math.tan(Math.PI / items.length)) * 1.4);
     items.forEach((item, i) => (item.style.transform = `rotateY(${i * step}deg) translateZ(${radius}px)`));
   };
   layout();
@@ -440,6 +440,7 @@ const progress = $('.scroll-progress');
 function toggleMenu(open = !menu.classList.contains('is-open')) {
   menu.classList.toggle('is-open', open);
   menu.setAttribute('aria-hidden', !open);
+  menu.inert = !open;
   burger.setAttribute('aria-expanded', open);
   open ? lenis.stop() : lenis.start();
 }

@@ -1480,13 +1480,11 @@ em {
 }
 
 .cta__logo {
-  width: 180px;
+  width: 200px;
   margin-bottom: 1.5rem;
-  padding: 1.2rem;
-  border-radius: 50%;
+  padding: 1.2rem 1.4rem;
+  border-radius: 36px;
   background: #fff;
-  aspect-ratio: 1;
-  object-fit: contain;
   box-shadow: 0 25px 50px -20px rgba(80, 10, 40, 0.5);
 }
 
@@ -1661,8 +1659,30 @@ em {
 
   .bubble,
   .f-macaron--2,
+  .f-heart--2,
+  .f-sparkle,
+  .f-sparkle--2,
+  .f-donut,
   .scroll-cue {
     display: none;
+  }
+
+  .f-macaron {
+    width: 54px;
+    height: 46px;
+    top: 5.5rem;
+  }
+
+  .f-cherry {
+    width: 46px;
+    height: 46px;
+    top: 5.8rem;
+    right: 5%;
+  }
+
+  .f-heart {
+    top: auto;
+    bottom: 3%;
   }
 
   .about,
