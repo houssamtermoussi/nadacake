@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nada Cake — Pâtisserie fait maison</title>
+    <meta
+      name="description"
+      content="Nada Cake : gâteaux, cakes et biscuits faits maison, préparés à la main avec amour. Commandez vos douceurs pour toutes vos occasions."
+    />
+    <meta name="theme-color" content="#f8a5c2" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-heart" viewBox="0 0 100 92">
+          <path
+            d="M50 88C20 66 4 48 4 30 4 16 15 6 28 6c10 0 18 6 22 14 4-8 12-14 22-14 13 0 24 10 24 24 0 18-16 36-46 58z"
+          />
+        </symbol>
+        <symbol id="i-sparkle" viewBox="0 0 100 100">
+          <path d="M50 0c4 35 15 46 50 50-35 4-46 15-50 50-4-35-15-46-50-50 35-4 46-15 50-50z" />
+        </symbol>
+        <symbol id="i-macaron" viewBox="0 0 100 84">
+          <ellipse cx="50" cy="25" rx="44" ry="21" fill="#f48fb1" />
+          <rect x="9" y="32" width="82" height="16" rx="8" fill="#fff4f8" />
+          <ellipse cx="50" cy="58" rx="44" ry="21" fill="#ec6a9c" />
+          <ellipse cx="36" cy="18" rx="15" ry="5" fill="#fff" opacity=".4" />
+        </symbol>
+        <symbol id="i-cherry" viewBox="0 0 100 100">
+          <path
+            d="M52 8C47 30 32 44 29 60M52 8c5 24 18 37 20 52"
+            stroke="#6b8e23"
+            stroke-width="4"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <path d="M52 8c16-8 28 0 30 8-14 6-24 2-30-8z" fill="#8bc34a" />
+          <circle cx="29" cy="72" r="18" fill="#d81b3c" />
+          <circle cx="72" cy="70" r="18" fill="#e8304f" />
+          <circle cx="23" cy="66" r="5" fill="#fff" opacity=".5" />
+          <circle cx="66" cy="64" r="5" fill="#fff" opacity=".5" />
+        </symbol>
+        <symbol id="i-donut" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="44" fill="#e9b47c" />
+          <path
+            d="M50 12c21 0 38 17 38 38 0 6-4 5-6 9-3 5-8 2-11 6-4 5-9 1-13 4-5 3-9 0-13 0-6 0-9-4-14-6-4-2-7-6-11-10-3-4-6-6-6-11 0-17 16-30 36-30z"
+            fill="#f48fb1"
+          />
+          <circle cx="50" cy="50" r="13" fill="#fff5f8" />
+          <g stroke-width="4" stroke-linecap="round">
+            <path d="M30 32l6 3" stroke="#fff" />
+            <path d="M66 26l-2 6" stroke="#ffd166" />
+            <path d="M74 50l6 2" stroke="#9be7ff" />
+            <path d="M36 62l-5 4" stroke="#fff" />
+            <path d="M58 70l5 3" stroke="#ffd166" />
+            <path d="M48 26l5-1" stroke="#9be7ff" />
+          </g>
+        </symbol>
+        <symbol id="i-rotate" viewBox="0 0 24 24">
+          <path
+            d="M12 5c5 0 9 1.8 9 4s-3 3.6-7 4m-2 0c-5 0-9-1.8-9-4s4-4 9-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+          <path d="M10 10.5l3 2.5-3 2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <!-- Preloader -->
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader__inner">
+        <img src="/images/logo.png" alt="" class="preloader__logo" />
+        <div class="preloader__bar"><span></span></div>
+        <p class="preloader__count"><span>0</span>%</p>
+      </div>
+    </div>
+
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <header class="nav">
+      <a href="#accueil" class="nav__brand" aria-label="Nada Cake — accueil">
+        <img src="/images/logo-icon.png" alt="" />
+        <span>Nada Cake</span>
+      </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="#histoire">Notre histoire</a>
+        <a href="#showroom">3D 360°</a>
+        <a href="#creations">Créations</a>
+        <a href="#vitrine">Vitrine</a>
+      </nav>
+      <a href="#commander" class="btn btn--small" data-magnetic>Commander</a>
+      <button class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+    </header>
+    <div class="mobile-menu" aria-hidden="true">
+      <a href="#histoire">Notre histoire</a>
+      <a href="#showroom">3D 360°</a>
+      <a href="#creations">Créations</a>
+      <a href="#vitrine">Vitrine</a>
+      <a href="#commander">Commander</a>
+    </div>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="accueil">
+        <div class="hero__bg" aria-hidden="true">
+          <div class="blob blob--1" data-speed="0.2" data-depth="0.3"></div>
+          <div class="blob blob--2" data-speed="0.5" data-depth="0.6"></div>
+          <div class="blob blob--3" data-speed="0.35" data-depth="0.45"></div>
+          <p class="hero__watermark" data-speed="0.6">Nada Cake</p>
+        </div>
+
+        <div class="floaters" aria-hidden="true">
+          <svg class="floater f-macaron" data-speed="0.9" data-depth="1.4"><use href="#i-macaron" /></svg>
+          <svg class="floater f-cherry" data-speed="1.3" data-depth="2"><use href="#i-cherry" /></svg>
+          <svg class="floater f-heart" data-speed="0.6" data-depth="0.9"><use href="#i-heart" /></svg>
+          <svg class="floater f-heart f-heart--2" data-speed="1.1" data-depth="1.6"><use href="#i-heart" /></svg>
+          <svg class="floater f-sparkle" data-speed="0.4" data-depth="0.8"><use href="#i-sparkle" /></svg>
+          <svg class="floater f-sparkle f-sparkle--2" data-speed="1.4" data-depth="2.2"><use href="#i-sparkle" /></svg>
+          <svg class="floater f-donut" data-speed="0.8" data-depth="1.2"><use href="#i-donut" /></svg>
+          <svg class="floater f-macaron f-macaron--2" data-speed="1.2" data-depth="1.8"><use href="#i-macaron" /></svg>
+          <div class="bubble bubble--1" data-speed="0.7" data-depth="1.1"><img src="/images/chocolat.webp" alt="" /></div>
+          <div class="bubble bubble--2" data-speed="1" data-depth="1.5"><img src="/images/biscuits.webp" alt="" /></div>
+        </div>
+
+        <div class="hero__inner container">
+          <div class="hero__text">
+            <p class="eyebrow hero__anim">Pâtisserie artisanale · Fait maison</p>
+            <h1 class="hero__title">
+              <span class="line"><span>Des douceurs</span></span>
+              <span class="line"><span><em>faites maison</em>,</span></span>
+              <span class="line"><span>avec amour.</span></span>
+            </h1>
+            <p class="hero__lead hero__anim">
+              Gâteaux, cakes et biscuits préparés à la main, comme à la maison. Pour vos fêtes, vos anniversaires ou
+              simplement pour le plaisir.
+            </p>
+            <div class="hero__ctas hero__anim">
+              <a href="#showroom" class="btn" data-magnetic>Découvrir nos gâteaux</a>
+              <a href="#commander" class="btn btn--ghost" data-magnetic>Commander</a>
+            </div>
+          </div>
+
+          <div class="hero__stage hero__anim">
+            <div class="hero__plate" aria-hidden="true"></div>
+            <svg class="hero__ring" viewBox="0 0 300 300" aria-hidden="true">
+              <defs><path id="ring-path" d="M150 150m-125 0a125 125 0 1 1 250 0a125 125 0 1 1-250 0" /></defs>
+              <text>
+                <textPath href="#ring-path">NADA CAKE ✿ FAIT MAISON ✿ AVEC AMOUR ✿ NADA CAKE ✿ FAIT MAISON ✿ AVEC AMOUR ✿</textPath>
+              </text>
+            </svg>
+            <div class="hero__canvas" id="hero-canvas"></div>
+            <p class="hint" id="hero-hint">
+              <svg><use href="#i-rotate" /></svg>
+              Faites-moi tourner à 360°
+            </p>
+          </div>
+        </div>
+
+        <a href="#histoire" class="scroll-cue" aria-label="Défiler vers le bas">
+          <span>Scroll</span>
+          <i></i>
+        </a>
+      </section>
+
+      <!-- MARQUEE -->
+      <section class="marquee" aria-label="Nos valeurs">
+        <div class="marquee__row" data-dir="1">
+          <div class="marquee__track">
+            <span>Fait maison</span><svg><use href="#i-heart" /></svg>
+            <span>Ingrédients frais</span><svg><use href="#i-sparkle" /></svg>
+            <span>Sur commande</span><svg><use href="#i-heart" /></svg>
+            <span>Anniversaires</span><svg><use href="#i-sparkle" /></svg>
+            <span>Fêtes &amp; mariages</span><svg><use href="#i-heart" /></svg>
+            <span>Biscuits</span><svg><use href="#i-sparkle" /></svg>
+          </div>
+        </div>
+        <div class="marquee__row marquee__row--alt" data-dir="-1">
+          <div class="marquee__track">
+            <span>Chocolat miroir</span><svg><use href="#i-sparkle" /></svg>
+            <span>Bûche aux noix</span><svg><use href="#i-heart" /></svg>
+            <span>Couronnes</span><svg><use href="#i-sparkle" /></svg>
+            <span>Cakes glacés</span><svg><use href="#i-heart" /></svg>
+            <span>Douceurs</span><svg><use href="#i-sparkle" /></svg>
+            <span>Nada Cake</span><svg><use href="#i-heart" /></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- HISTOIRE -->
+      <section class="about" id="histoire">
+        <div class="container about__grid">
+          <div class="about__visual">
+            <figure class="about__img about__img--main reveal-clip" data-speed="-0.15">
+              <img src="/images/vitrine.webp" alt="Vitrine de pâtisseries Nada Cake" data-inner-parallax />
+            </figure>
+            <figure class="about__img about__img--small reveal-clip" data-speed="0.35">
+              <img src="/images/biscuits.webp" alt="Boîte de biscuits Nada Cake" data-inner-parallax />
+            </figure>
+            <div class="about__badge" data-speed="0.6">
+              <svg viewBox="0 0 120 120" class="about__badge-ring">
+                <defs><path id="badge-path" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0" /></defs>
+                <text><textPath href="#badge-path">100% FAIT MAISON ✿ 100% FAIT MAISON ✿</textPath></text>
+              </svg>
+              <svg class="about__badge-heart"><use href="#i-heart" /></svg>
+            </div>
+          </div>
+
+          <div class="about__text">
+            <p class="eyebrow" data-reveal>Notre histoire</p>
+            <h2 class="title" data-split>La douceur de la maison, dans <em>chaque part</em>.</h2>
+            <p data-reveal>
+              Chez <strong>Nada Cake</strong>, chaque gâteau naît dans une cuisine familiale. Pas de chaîne, pas de
+              raccourci&nbsp;: juste de bons ingrédients, des recettes transmises et beaucoup de patience.
+            </p>
+            <p data-reveal>
+              Du chocolat miroir aux bûches aux noix, en passant par nos biscuits croquants, tout est préparé à la main,
+              au moment de votre commande.
+            </p>
+            <ul class="features">
+              <li data-reveal>
+                <span class="features__icon"><svg><use href="#i-heart" /></svg></span>
+                <div><strong>Fait main</strong><small>Préparé avec soin, pièce par pièce</small></div>
+              </li>
+              <li data-reveal>
+                <span class="features__icon"><svg><use href="#i-sparkle" /></svg></span>
+                <div><strong>Ingrédients frais</strong><small>Beurre, œufs, chocolat de qualité</small></div>
+              </li>
+              <li data-reveal>
+                <span class="features__icon"><svg><use href="#i-cherry" /></svg></span>
+                <div><strong>Sur mesure</strong><small>Des gâteaux pour chaque occasion</small></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHOWROOM 3D -->
+      <section class="showroom" id="showroom">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-reveal>Showroom 3D</p>
+            <h2 class="title" data-split>Tournez autour de nos gâteaux, <em>à 360°</em>.</h2>
+            <p data-reveal>Glissez pour faire pivoter le gâteau et découvrez-le sous tous les angles.</p>
+          </header>
+
+          <div class="showroom__grid">
+            <div class="showroom__stage" data-reveal>
+              <div class="showroom__canvas" id="showroom-canvas"></div>
+              <span class="badge-360">360°</span>
+              <p class="hint hint--dark" id="showroom-hint">
+                <svg><use href="#i-rotate" /></svg>
+                Glissez pour tourner
+              </p>
+              <button class="autorotate" id="autorotate" aria-pressed="true">
+                <span class="autorotate__dot"></span> Rotation auto
+              </button>
+            </div>
+
+            <div class="showroom__panel">
+              <div class="cake-tabs" role="tablist" aria-label="Choisir un gâteau">
+                <button class="cake-tab is-active" role="tab" aria-selected="true" data-cake="rose">
+                  <span class="cake-tab__swatch" style="--c: #f27aa6"></span> Rose Nada
+                </button>
+                <button class="cake-tab" role="tab" aria-selected="false" data-cake="chocolat">
+                  <span class="cake-tab__swatch" style="--c: #3a1c10"></span> Chocolat Miroir
+                </button>
+                <button class="cake-tab" role="tab" aria-selected="false" data-cake="noix">
+                  <span class="cake-tab__swatch" style="--c: #c79a64"></span> Bûche aux Noix
+                </button>
+              </div>
+
+              <article class="cake-info" aria-live="polite">
+                <p class="cake-info__tag" id="cake-tag">La signature</p>
+                <h3 class="cake-info__name" id="cake-name">Rose Nada</h3>
+                <p class="cake-info__desc" id="cake-desc">
+                  Le gâteau de notre logo&nbsp;: une génoise moelleuse, une crème légère, un glaçage rose qui coule
+                  gourmand et la cerise sur le gâteau.
+                </p>
+                <ul class="cake-info__list" id="cake-list">
+                  <li>Génoise vanille</li>
+                  <li>Crème légère</li>
+                  <li>Glaçage rose</li>
+                </ul>
+                <a href="#commander" class="btn" data-magnetic>Je le veux&nbsp;!</a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CREATIONS (scroll horizontal) -->
+      <section class="creations" id="creations">
+        <div class="creations__head container">
+          <p class="eyebrow" data-reveal>Nos créations</p>
+          <h2 class="title" data-split>Une vitrine pleine de <em>gourmandises</em>.</h2>
+        </div>
+        <div class="creations__viewport">
+          <div class="creations__track">
+            <article class="card" data-tilt>
+              <div class="card__media"><img src="/images/chocolat.webp" alt="Gâteau au chocolat miroir" /></div>
+              <div class="card__body">
+                <span class="card__num">01</span>
+                <h3>Chocolat Miroir</h3>
+                <p>Glaçage brillant et copeaux de chocolat.</p>
+              </div>
+            </article>
+            <article class="card" data-tilt>
+              <div class="card__media"><img src="/images/noix.webp" alt="Bûche aux noix" /></div>
+              <div class="card__body">
+                <span class="card__num">02</span>
+                <h3>Bûche aux Noix</h3>
+                <p>Crème onctueuse, noix et pétales de rose.</p>
+              </div>
+            </article>
+            <article class="card" data-tilt>
+              <div class="card__media"><img src="/images/bundt-creme.webp" alt="Couronne crème et amandes" /></div>
+              <div class="card__body">
+                <span class="card__num">03</span>
+                <h3>Couronne Crème</h3>
+                <p>Rosettes de crème et éclats d'amandes.</p>
+              </div>
+            </article>
+            <article class="card" data-tilt>
+              <div class="card__media"><img src="/images/biscuits.webp" alt="Boîte de biscuits Nada Cake" /></div>
+              <div class="card__body">
+                <span class="card__num">04</span>
+                <h3>Biscuits Maison</h3>
+                <p>Croquants, dorés, en jolie boîte à offrir.</p>
+              </div>
+            </article>
+            <article class="card" data-tilt>
+              <div class="card__media"><img src="/images/bundt-citron.webp" alt="Couronne au citron" /></div>
+              <div class="card__body">
+                <span class="card__num">05</span>
+                <h3>Couronne Citron</h3>
+                <p>Fondante et acidulée, nappage citron.</p>
+              </div>
+            </article>
+            <article class="card" data-tilt>
+              <div class="card__media"><img src="/images/cake-glace.webp" alt="Cake glacé aux noix" /></div>
+              <div class="card__body">
+                <span class="card__num">06</span>
+                <h3>Cake Glacé</h3>
+                <p>Glaçage coulant et cerneaux de noix.</p>
+              </div>
+            </article>
+            <div class="card card--cta">
+              <svg class="card--cta__icon"><use href="#i-heart" /></svg>
+              <h3>Et bien plus encore…</h3>
+              <p>Une envie particulière&nbsp;? On la réalise pour vous.</p>
+              <a href="#commander" class="btn btn--light" data-magnetic>Demander un devis</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VITRINE 360 -->
+      <section class="vitrine" id="vitrine">
+        <div class="container section-head">
+          <p class="eyebrow" data-reveal>Vitrine 360°</p>
+          <h2 class="title" data-split>Faites tourner <em>la vitrine</em>.</h2>
+          <p data-reveal>Attrapez le carrousel et faites-le tourner pour admirer nos douceurs.</p>
+        </div>
+        <div class="ring-scene" id="ring-scene">
+          <div class="ring" id="ring">
+            <figure class="ring__item"><img src="/images/vitrine.webp" alt="Vitrine Nada Cake" draggable="false" /></figure>
+            <figure class="ring__item"><img src="/images/chocolat.webp" alt="Chocolat miroir" draggable="false" /></figure>
+            <figure class="ring__item"><img src="/images/bundt-creme.webp" alt="Couronne crème" draggable="false" /></figure>
+            <figure class="ring__item"><img src="/images/noix.webp" alt="Bûche aux noix" draggable="false" /></figure>
+            <figure class="ring__item"><img src="/images/biscuits.webp" alt="Biscuits" draggable="false" /></figure>
+            <figure class="ring__item"><img src="/images/bundt-citron.webp" alt="Couronne citron" draggable="false" /></figure>
+            <figure class="ring__item"><img src="/images/cake-glace.webp" alt="Cake glacé" draggable="false" /></figure>
+            <figure class="ring__item ring__item--logo"><img src="/images/logo.png" alt="Logo Nada Cake" draggable="false" /></figure>
+          </div>
+          <div class="ring-floor" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- ETAPES -->
+      <section class="steps">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-reveal>Comment commander&nbsp;?</p>
+            <h2 class="title" data-split>Trois étapes vers <em>le bonheur</em>.</h2>
+          </header>
+          <ol class="steps__list">
+            <li class="step" data-reveal>
+              <span class="step__num">1</span>
+              <svg class="step__icon"><use href="#i-macaron" /></svg>
+              <h3>Choisissez</h3>
+              <p>Parcourez nos créations ou décrivez-nous le gâteau de vos rêves.</p>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step__num">2</span>
+              <svg class="step__icon"><use href="#i-donut" /></svg>
+              <h3>On prépare</h3>
+              <p>Votre commande est préparée à la main, avec des ingrédients frais.</p>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step__num">3</span>
+              <svg class="step__icon"><use href="#i-cherry" /></svg>
+              <h3>Vous dégustez</h3>
+              <p>Récupérez votre douceur et partagez-la avec ceux que vous aimez.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- CTA / CONTACT -->
+      <section class="cta" id="commander">
+        <div class="cta__bg" aria-hidden="true">
+          <svg class="floater cta-f1" data-speed="0.8"><use href="#i-heart" /></svg>
+          <svg class="floater cta-f2" data-speed="1.2"><use href="#i-sparkle" /></svg>
+          <svg class="floater cta-f3" data-speed="0.5"><use href="#i-macaron" /></svg>
+          <svg class="floater cta-f4" data-speed="1"><use href="#i-cherry" /></svg>
+        </div>
+        <div class="container cta__inner">
+          <img src="/images/logo.png" alt="Nada Cake" class="cta__logo" data-speed="-0.2" />
+          <h2 class="title title--xl" data-split>Envie d'une <em>douceur</em>&nbsp;?</h2>
+          <p data-reveal>Passez votre commande en quelques secondes. On s'occupe du reste, avec amour.</p>
+          <div class="cta__buttons" data-reveal>
+            <a href="https://wa.me/" class="btn btn--light" target="_blank" rel="noopener" data-magnetic>WhatsApp</a>
+            <a href="https://instagram.com/" class="btn btn--outline-light" target="_blank" rel="noopener" data-magnetic
+              >Instagram</a
+            >
+            <a href="tel:+" class="btn btn--outline-light" data-magnetic>Appeler</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <a href="#accueil" class="nav__brand footer__brand">
+          <img src="/images/logo-icon.png" alt="" />
+          <span>Nada Cake</span>
+        </a>
+        <p>Pâtisserie fait maison · Préparé avec amour</p>
+        <p class="footer__copy">© <span id="year"></span> Nada Cake. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
