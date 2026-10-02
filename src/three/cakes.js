@@ -301,12 +301,12 @@ export function createWalnutLog() {
   board.position.y = 0.025;
   group.add(board);
 
-  const crumbTex = speckleTexture('#ead3b4', ['#b98a5a', '#8c6239', '#fff3e0', '#cfa77c'], 5200);
+  const crumbTex = speckleTexture('#d4ac7c', ['#a0703f', '#7a5029', '#f1dcbc', '#bf9160', '#5e3a1c'], 7000);
   crumbTex.repeat.set(2, 1);
   const body = shadowed(
     new THREE.Mesh(
       new RoundedBoxGeometry(3.0, 0.72, 0.88, 5, 0.14),
-      physical(0xffffff, { roughness: 0.95, map: crumbTex }),
+      physical(0xf2dcc0, { roughness: 0.95, map: crumbTex }),
     ),
   );
   body.position.y = 0.05 + 0.36;
@@ -343,11 +343,11 @@ export function createWalnutLog() {
     }
   }
 
-  const walnut = walnutGeometry(0.11);
-  const walnutMat = physical(0xa8662a, { roughness: 0.55, clearcoat: 0.3 });
+  const walnut = walnutGeometry(0.14);
+  const walnutMat = physical(0x9c5a22, { roughness: 0.55, clearcoat: 0.3 });
   for (let i = 0; i < 10; i++) {
     const m = shadowed(new THREE.Mesh(walnut, walnutMat));
-    m.position.set(-1.17 + i * 0.26, topY + 0.13, (i % 2 ? 1 : -1) * 0.02);
+    m.position.set(-1.17 + i * 0.26, topY + 0.16, (i % 2 ? 1 : -1) * 0.02);
     m.rotation.set(rnd() * 0.4, rnd() * Math.PI, rnd() * 0.4);
     group.add(m);
   }

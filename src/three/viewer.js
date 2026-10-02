@@ -81,7 +81,8 @@ export function createViewer(
   scene.add(rim);
 
   const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
-  camera.position.set(0, 2.9, 6.9);
+  if (pedestal) camera.position.set(0, 2.5, 6.2);
+  else camera.position.set(0, 2.9, 6.9);
 
   const stage = new THREE.Group();
   const holder = new THREE.Group();
@@ -120,7 +121,7 @@ export function createViewer(
   scene.add(sparkles);
 
   const controls = new OrbitControls(camera, renderer.domElement);
-  controls.target.set(0, 0.75, 0);
+  controls.target.set(0, pedestal ? 0.5 : 0.75, 0);
   controls.enableDamping = true;
   controls.dampingFactor = 0.06;
   controls.enablePan = false;
